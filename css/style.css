@@ -1,0 +1,231 @@
+/***********************************
+* Folhas de Estilo do Frist Front *
+***********************************/
+
+/***** Reset Geral *****/
+/* 
+Ajusta as tags para se comportar da mesma forma,
+mesmo com diferenças entre navegadores.
++/
+
+/* Todas as caixas */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Todos links */
+a {
+    text-decoration: none;
+    color: rgb(0, 124, 41);
+}
+
+/* Todos os links com ponteiro sobre */
+a:hover {
+    color: white;
+}
+
+/* Elementoas raiz */
+html,
+body {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    /* Define a fonte padrão e o tamanho */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    /* 
+    O atributo acima define uma unidade "rem". 
+    Iso significa que 1rem = 16px, .5rem = 8px, 2rem = 32px
+    */
+    
+    /* Sticky footer */
+    min-height: 100%;
+
+}
+
+/* Fundo da Página*/
+body{
+    background-image: url('../img/gardenfantasy.png');
+    background-color: aquamarine;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Remove margens fos titulos. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: .85rem 0;
+    
+}
+
+/***** Elemento #wrap *****/
+
+#wrap {
+
+    /* Sticky footer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/***** Cabeçalho *****/
+
+/* Seleciona o elemento "header" que é filho direto do emelento div#wrap */
+#wrap>header {
+    background-color: rgb(154, 231, 139);
+    padding: 1rem;
+}
+
+/* Apenas imagem dentro do header. */
+#wrap>header img {
+    display: block;
+    width: 5rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Elemento div que contém logo e nome do site. */
+#wrap>header>div {
+    display: flex;
+    align-items:center;
+}
+
+/* Formulário de pesquisa no header. */
+#wrap > header form {
+    margin-top: 1rem;
+    display: flex;
+}
+
+/* O campo de pesquisa cresce o máximo possível. */
+#wrap > header form input {
+    flex-grow: 1;
+    border-radius: .4rem 0 0 .4rem;
+
+}
+/* Ajustando o botão da lupa/pesquisa */
+#wrap>header form button {
+    border-radius: 0 .4rem .4rem 0;
+}
+
+/* Seleciona todos os filhos do form. */
+
+#wrap>header form>* {
+
+    /* herda as configurações da fonte dos elementos raiz (FTHML, BODY).*/
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    padding: .5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+}
+
+/* Título (nome) do site. */
+#wrap > header h1 {
+    font-size: 2.0rem;
+    line-height: 1;
+    color: rgb(37, 151, 14);
+    -webkit-text-stroke: .7px rgb(255, 255, 255);
+    padding: 0;
+    padding-left: .85rem;
+    
+}
+
+/***** Menu Principal *****/
+
+#wrap>nav{
+    background-color: rgb(37, 151, 14);
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid rgb(154, 231, 139);
+    border-bottom: 1px solid rgb(154, 231, 139);
+}
+
+#wrap>nav>a {
+    padding: .8rem .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+    color: white;
+    transition: .2s;
+
+}
+
+/* Quando o cursor do mouse está sobre */
+#wrap>nav a:hover {
+    background-color: white;
+    color: rgb(154, 231, 139);
+}
+
+#wrap>nav i {
+    font-size: 1rem;
+}
+
+/*Rodapé */
+#wrap>footer {
+    background-color: rgb(154, 231, 139);
+    color: rgb(0, 124, 41);   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(37, 151, 14);
+    border-bottom: 1px solid rgb(37, 151, 14);
+}
+
+#wrap> footer a{
+    padding: .3rem;
+    color: rgb(0, 124, 41);
+    transition: .2s;
+}
+
+#wrap>footer a:hover {
+    background-color: rgb(37, 151, 14);
+    color: rgb(255, 255, 255);
+}
+#wrap>footer i {
+    font-size: 1.5rem;
+}
+
+
+/***** Conteúdo principal *****/
+
+#wrap>main {
+    /* Sticky footer */
+    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrap>main section,
+#wrap>main article {
+    padding: 0 1.5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+
+
+    /* Sticky footer */
+    flex: 1;
+}
+
+#wrap>main aside{
+    padding: 0 .1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/***** Classes de uso geral *****/
+
+img.responsive {
+    max-width: 100%;
+    width: auto;
+}
